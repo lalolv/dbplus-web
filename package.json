@@ -1,0 +1,69 @@
+{
+  "name": "db_plus",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "babel-eslint": "^10.0.1",
+    "blueimp-md5": "^2.10.0",
+    "chartist": "0.11.0",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "vue": "^2.6.10",
+    "vue-chartist": "^2.1.2",
+    "vue-meta": "^1.6.0",
+    "vuetify": "^1.5.14"
+  },
+  "devDependencies": {
+    "@mdi/font": "^2.5.94",
+    "@vue/cli-plugin-babel": "^3.5.3",
+    "@vue/cli-plugin-eslint": "^3.0.1",
+    "@vue/cli-service": "^3.5.3",
+    "@vue/eslint-config-standard": "^3.0.1",
+    "axios": "^0.18.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "material-design-icons-iconfont": "^3.0.3",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "vue-analytics": "^5.8.0",
+    "vue-i18n": "^7.4.0",
+    "vue-router": "^3.0.1",
+    "vue-template-compiler": "^2.6.10",
+    "vuex": "^3.0.1",
+    "vuex-router-sync": "^5.0.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {
+      "no-console": "off"
+    },
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
