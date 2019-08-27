@@ -66,12 +66,10 @@ export default {
       this.$fetch("/user/login", "post", bodyData, this.loginDone);
     },
     loginDone() {
-      // console.log("save token", result.token);
-      // this.$store.commit("setToken", result.token);
       // 跳转到主页
-      this.$router.replace("overview", this.goOverview);
+      this.$router.replace("home/dashboard/1", this.goHome);
     },
-    goOverview() {
+    goHome() {
       // 还原按钮状态
       this.loading = false;
     }

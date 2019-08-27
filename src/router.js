@@ -15,11 +15,6 @@ export default new Router({
       component: resovle => import("./views/Login.vue").then(resovle)
     },
     {
-      path: "/overview",
-      name: "overview",
-      component: resovle => import("./views/Overview.vue").then(resovle)
-    },
-    {
       path: "/home",
       component: resovle => import("./views/Home.vue").then(resovle),
       children: [
