@@ -13,12 +13,7 @@
 export default {
   components: {},
   created: function() {
-    this.$fetch(
-      "/server/get?key=" + this.$route.params.id,
-      "get",
-      null,
-      this.serverDone
-    );
+    this.$fetch("/server/get", "get", null, this.serverDone);
   },
   data: () => ({
     info: {},
@@ -26,8 +21,7 @@ export default {
   }),
   methods: {
     serverDone(result) {
-      this.info = result.server;
-      this.dbs = result.dbs;
+      this.dbs = result;
     }
   }
 };
