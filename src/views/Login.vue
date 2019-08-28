@@ -73,7 +73,7 @@ export default {
     },
     loginDone() {
       // 跳转到主页
-      this.$router.replace("home/dashboard/1", this.goHome);
+      this.$router.replace("home/dashboard", this.goHome);
     },
     goHome() {
       // 还原按钮状态

@@ -6,7 +6,7 @@ Vue.use(Router);
 Vue.use(Meta);
 
 export default new Router({
-  mode: "hash",
+  mode: "history",
   // base: process.env.BASE_URL,
   routes: [
     {
@@ -19,7 +19,7 @@ export default new Router({
       component: resovle => import("./views/Home.vue").then(resovle),
       children: [
         {
-          path: "dashboard/:id",
+          path: "dashboard",
           name: "dashboard",
           component: resovle => import("./views/database/Dashboard.vue").then(resovle)
         },

@@ -1,9 +1,7 @@
 <template>
   <v-container fluid grid-list-md text-xs-center>
-    <v-layout justify-center align-center>
-      <v-flex grow>
-        <router-view/>
-      </v-flex>
+    <v-layout fill-height justify-center>
+      <router-view />
     </v-layout>
   </v-container>
 </template>
@@ -17,9 +15,3 @@ export default {
   }
 };
 </script>
-
-<style>
-#core-view {
-  padding-bottom: 100px;
-}
-</style>

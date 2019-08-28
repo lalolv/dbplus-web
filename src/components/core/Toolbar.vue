@@ -6,9 +6,9 @@
       <span class="title">DB Plus</span>
     </v-toolbar-title>
     <v-layout row align-center style="max-width: 650px">
-      <a href="#" class="v-btn v-btn--flat navi-menu">概览</a>
+      <a href="/home/dashboard" class="v-btn v-btn--flat navi-menu">主页</a>
       <a href="#" class="v-btn v-btn--flat navi-menu">帮助</a>
-      <a href="#" class="v-btn v-btn--flat navi-menu">关于</a>
+      <a href="#" class="v-btn v-btn--flat navi-menu">日志</a>
       <a href="#" class="v-btn v-btn--flat navi-menu">设置</a>
     </v-layout>
     <v-spacer></v-spacer>

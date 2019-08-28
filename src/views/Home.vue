@@ -6,6 +6,8 @@
     <core-toolbar></core-toolbar>
     <!-- 主体内容 -->
     <core-view></core-view>
+    <!-- 底部 -->
+    <core-footer></core-footer>
   </v-app>
 </template>
 
