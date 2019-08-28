@@ -1,5 +1,7 @@
 # DB+ 管理界面
 
+[![alt travis](https://travis-ci.org/lalolv/dbplus-web.svg?branch=master)](https://travis-ci.org/lalolv/dbplus-web)
+
 DB+ 项目的前端管理界面
 
 ## 安装向导
