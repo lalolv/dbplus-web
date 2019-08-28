@@ -36,7 +36,7 @@ axios.interceptors.response.use(
 );
 
 // 请求接口，调用回调函数
-Vue.prototype.$fetch = function(url, method, data, callFun) {
+Vue.prototype.$fetch = function(url, method, data, callFun, errFun) {
   // 获取 token
   // let token = this.$store.getters.getToken;
   // console.log("token", token);
@@ -52,9 +52,15 @@ Vue.prototype.$fetch = function(url, method, data, callFun) {
         callFun(response.data);
       } else {
         console.log(response.msg);
+        if (errFun) {
+          errFun(response.msg);
+        }
       }
     })
     .catch(function(error) {
       console.log(error, "error");
+      if (errFun) {
+        errFun(error);
+      }
     });
 };

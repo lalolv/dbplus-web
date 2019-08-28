@@ -63,7 +63,13 @@ export default {
         name: this.user,
         passwd: md5(this.password)
       };
-      this.$fetch("/user/login", "post", bodyData, this.loginDone);
+      this.$fetch(
+        "/user/login",
+        "post",
+        bodyData,
+        this.loginDone,
+        this.loginErr
+      );
     },
     loginDone() {
       // 跳转到主页
@@ -72,6 +78,10 @@ export default {
     goHome() {
       // 还原按钮状态
       this.loading = false;
+    },
+    loginErr(err) {
+      this.loading = false;
+      this.$events.emit("snackbar", { color: "error", text: err });
     }
   }
 };

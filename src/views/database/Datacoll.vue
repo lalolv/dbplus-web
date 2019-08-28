@@ -68,7 +68,7 @@ export default {
         column_name: c,
         update_val: v
       };
-      this.$fetch(url, "put", bodyData, this.updateDone);
+      this.$fetch(url, "put", bodyData, this.updateDone, null);
     },
     updateDone() {
       console.log("更新完成！");
@@ -84,7 +84,7 @@ export default {
       // 获取数据
       let url =
         "/data/list?db_name=" + this.dbName + "&coll_name=" + this.collName;
-      this.$fetch(url, "get", null, this.listDone);
+      this.$fetch(url, "get", null, this.listDone, null);
     },
     listDone(result) {
       this.headers = result.header;
