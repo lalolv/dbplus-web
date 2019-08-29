@@ -6,7 +6,7 @@ import axios from "axios";
 // Vue.prototype.$http = axios;
 
 // 默认请求
-axios.defaults.baseURL = "http://127.0.0.1:6868";
+axios.defaults.baseURL = process.env.VUE_APP_API_URL;
 // axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 // axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 // 获取用户ID

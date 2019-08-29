@@ -2,7 +2,7 @@
   <v-footer id="core-footer" absolute height="82">
     <div class="footer-items">
       <span v-for="link in links" :key="link.name">
-        <a :href="link.Link" class="tertiary--text footer-links">{{ link.name }}</a>
+        <router-link :to="link.Link" class="tertiary--text footer-links">{{ link.name }}</router-link>
       </span>
     </div>
     <v-spacer />
