@@ -8,18 +8,8 @@
         </v-list-tile-action>
         <v-list-tile-title class="grey--text text--darken-1">创建集合</v-list-tile-title>
       </v-list-tile>
-      <v-list-tile>
-        <v-list-tile-action>
-          <v-icon color="grey darken-1">mdi-database-import</v-icon>
-        </v-list-tile-action>
-        <v-list-tile-title class="grey--text text--darken-1">导入数据</v-list-tile-title>
-      </v-list-tile>
-      <v-list-tile>
-        <v-list-tile-action>
-          <v-icon color="grey darken-1">mdi-database-export</v-icon>
-        </v-list-tile-action>
-        <v-list-tile-title class="grey--text text--darken-1">导出数据</v-list-tile-title>
-      </v-list-tile>
+      <ImportData></ImportData>
+      <ExportData></ExportData>
       <!-- 当前服务器 -->
       <v-subheader class="mt-3 grey--text text--darken-1">开发服务器: 10.19.238.2:27017</v-subheader>
       <!-- 集合列表 -->
@@ -54,6 +44,8 @@
 <script>
 // Utilities
 // import { mapMutations, mapState } from "vuex";
+import ImportData from "../tools/ImportData";
+import ExportData from "../tools/ExportData";
 
 export default {
   data: () => ({
@@ -62,6 +54,10 @@ export default {
     responsive: false
   }),
   props: ["items"],
+  components: {
+    ImportData,
+    ExportData
+  },
   computed: {
     inputValue: {
       get() {
