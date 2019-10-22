@@ -12,6 +12,23 @@
       <v-card-title class="headline grey lighten-2" primary-title>导入数据</v-card-title>
 
       <v-card-text>
+        <v-form>
+          <v-text-field
+            color="black"
+            prepend-icon="mdi-data_usage"
+            name="dbName"
+            label="数据集名称"
+            type="text"
+            v-model="dbName"
+          ></v-text-field>
+          <v-text-field
+            color="black"
+            prepend-icon="mdi-collections"
+            name="collName"
+            label="集合名称"
+            v-model="collName"
+          ></v-text-field>
+        </v-form>
         <vue-dropzone
           ref="myVueDropzone"
           id="dropzone"
@@ -41,8 +58,10 @@ export default {
       dropzoneOptions: {
         url: "http://127.0.0.1:6868/data/import",
         thumbnailWidth: 150,
-        maxFilesize: 0.5
-      }
+        maxFilesize: 10
+      },
+      dbName: "",
+      collName: ""
     };
   },
   components: {
@@ -50,8 +69,8 @@ export default {
   },
   methods: {
     sendingEvent(file, xhr, formData) {
-      formData.append("db_name", "test");
-      formData.append("coll_name", "import_demo");
+      formData.append("db_name", this.dbName);
+      formData.append("coll_name", this.collName);
     }
   }
 };

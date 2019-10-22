@@ -6,7 +6,7 @@
         :items="desserts"
         item-key="_id"
         hide-actions
-        style="min-width:820px"
+        class="data-table"
       >
         <template v-slot:items="props">
           <td v-for="header in headers" :key="header.value" class="text-xs-left">
@@ -94,3 +94,8 @@ export default {
 };
 </script>
 
+<style lang="stylus">
+.data-table {
+  min-width: 820px;
+}
+</style>

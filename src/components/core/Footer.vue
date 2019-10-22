@@ -1,5 +1,5 @@
 <template>
-  <v-footer id="core-footer" absolute height="82">
+  <v-footer id="core-footer" height="82">
     <div class="footer-items">
       <span v-for="link in links" :key="link.name">
         <router-link :to="link.Link" class="tertiary--text footer-links">{{ link.name }}</router-link>
