@@ -56,7 +56,7 @@ export default {
     return {
       dialog: false,
       dropzoneOptions: {
-        url: "http://127.0.0.1:6868/data/import",
+        url: process.env.VUE_APP_API_URL + "/data/import",
         thumbnailWidth: 150,
         maxFilesize: 10
       },
